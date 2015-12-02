@@ -3,7 +3,7 @@ language: php
 php: 
   #- 5.3
   #- 5.4
-  #- 5.5
+  - 5.5
   - 5.6
   
 before_script: 
@@ -15,7 +15,7 @@ script:
 
 notifications:
   email: 
-    varsha@shippable.com
+    test_ci2@yahoo.in
   irc: "chat.freenode.net#test-irc"
     
 archive: true
