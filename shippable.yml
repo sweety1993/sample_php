@@ -20,7 +20,8 @@ after_failure:
   - echo :failure"
   
 notifications:
-   email: 
+  email: 
     varsha@shippable.com
+  irc: "chat.freenode.net#test-irc"
     
 archive: true
