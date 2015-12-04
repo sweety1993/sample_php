@@ -16,8 +16,10 @@ script:
 notifications:
   email: 
     test_ci2@yahoo.in
-  irc: "chat.freenode.net#test-irc"
+  irc:
+    pull_request: true
+    channels: "chat.freenode.net#test-irc"
     
 archive: true
 
-cache: true
+#cache: true
