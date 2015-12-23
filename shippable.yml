@@ -17,9 +17,6 @@ notifications:
   email: 
     test_ci2@yahoo.in
   irc:
-    pull_request: true
     channels: "chat.freenode.net#test-irc"
     
 archive: true
-
-#cache: true
