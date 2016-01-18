@@ -1,10 +1,12 @@
 language: php
 
 php: 
-  - 5.3
- # - 5.4
-  #- 5.5
-  #- 5.6
+  - 5.4
+  - 5.5
+  - 5.6
+  - "7.0"
+  
+build_image: drydock/u14php:tip
   
 before_script: 
   - mkdir -p shippable/codecoverage
@@ -20,7 +22,9 @@ after_failure:
   - echo :failure"
   
 notifications:
-   email: 
-    varsha@shippable.com
+  email: 
+    test_ci2@yahoo.in
+  irc:
+    channels: "chat.freenode.net#test-irc"
     
 archive: true
