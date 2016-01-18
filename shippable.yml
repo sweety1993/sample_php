@@ -6,7 +6,7 @@ php:
   - 5.6
   - 7.0
   
-build_image: drydock/u12phpall:tip
+build_image: drydock/u12php:tip
 
 before_script: 
   - mkdir -p shippable/codecoverage
