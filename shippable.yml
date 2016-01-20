@@ -17,7 +17,7 @@ after_success:
   - echo "success"
   
 after_failure:
-  - echo :failure"
+  - echo "failure"
   
 notifications:
   email: 
