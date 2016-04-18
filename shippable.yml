@@ -11,3 +11,15 @@ build:
     - mkdir -p shippable/codecoverage
     - mkdir -p shippable/testresults   
     - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
+
+integrations:
+   notifications:
+    - integrationName: email
+      type: email
+      recipients: 
+        - shiphitchcock1@gmail.com
+       # - varsha@shippable.com
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
