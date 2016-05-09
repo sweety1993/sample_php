@@ -23,3 +23,36 @@ integrations:
       on_success: always
       on_failure: always
       on_pull_request: always  
+      
+    - integrationName: ship-slack
+      type: slack
+      recipients: 
+        - "#hitchcock1-public"
+        - pvt-channel
+      
+      on_start: always
+      on_pull_request: always
+      on_success: always
+      on_failure: always
+ 
+    - integrationName: irc
+      type: irc
+      recipients: 
+        - "chat.freenode.net#test-cock1"
+       # - "chat.freenode.net#hitchcok2-irc"
+      
+      on_start: always
+      on_pull_request: always
+      on_success: always
+      on_failure: always
+   
+    - integrationName: ship-hipchat
+      type: hipchat
+      recipients: 
+        - "#hitchcock1pvt"
+        - "@shiphitchcock1"
+      
+      on_start: always
+      on_pull_request: always
+      on_success: always
+      on_failure: always
