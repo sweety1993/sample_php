@@ -32,10 +32,10 @@ integrations:
         - shiphitchcock1@gmail.com
       #  - vidya@shippable.com
       
-      on_pull_request: always
-      on_start: always
-      on_success: always
-      on_failure: always
+      on_pull_request: never
+      on_start: never
+      on_success: never
+      on_failure: never
 
     - integrationName: ship-slack
       type: slack
@@ -43,20 +43,20 @@ integrations:
         - "#hitchcock1-public"
         - pvt-channel
       
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
+      on_pull_request: never
+      on_start: never
+      on_success: never
+      on_failure: never
  
     - integrationName: irc
       type: irc
       recipients: 
         - "chat.freenode.net#test-cock1"
       
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always
+      on_pull_request: never
+      on_start: never
+      on_success: never
+      on_failure: never
    
     - integrationName: ship-hipchat
       type: hipchat
@@ -65,7 +65,7 @@ integrations:
         - "#hitchcock1pvt"
         - "@shiphitchcock1"
       
-      on_start: always
-      on_pull_request: always
-      on_success: always
-      on_failure: always  
+      on_pull_request: never
+      on_start: never
+      on_success: never
+      on_failure: never
