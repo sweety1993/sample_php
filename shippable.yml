@@ -4,7 +4,11 @@ php:
   - 5.3
   - 5.4
   - 5.5
-  - 5.6   
+  - 5.6  
+  
+env:
+  - secure: Cl9e5akLjt3kpM/czbS+c5VIqKOyiJmGuGiObRp/cDF0yedw5++lDapYyiCW5GggJ3Pxe7FEG7jwnfADpdV8AozUO8EVO6w2hHtK/651t2Cc/McLLDGPbatqIGjRXuLcN8uKBTnxe0an1Wmg1ep6vUfh88sdvzyKBGpXzAiPEUgKBWLsgXnrHaRC7LAuMEBO4JxWFkeoUVTXvsio1OcFtIqasQMBEj11k90NC5TwkoSQq3rRpHwWIBoJnDbCFwyuHomTA13vci2k3Hg/hBhl3YKd6UtZkOSe+mQjtBqYMF9AAIeM6NLen9SOsAdn85KgeI6O7vK1yaVPan79X5Pdrg==
+  - BOO=TEST
   
 build:
   ci:
