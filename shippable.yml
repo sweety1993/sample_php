@@ -29,15 +29,15 @@ integrations:
     - integrationName: email
       type: email
       recipients: 
-        - shiphitchcock1@gmail.com
-      #  - vidya@shippable.com
+        - sreya@shippable.com
+        - sreyaj10@gmail.com
       
       on_pull_request: never
       on_start: never
       on_success: never
       on_failure: never
 
-    - integrationName: ship-slack
+    - integrationName: ship4-slack
       type: slack
       recipients: 
         - "#hitchcock1-public"
@@ -58,12 +58,12 @@ integrations:
       on_success: never
       on_failure: never
    
-    - integrationName: ship-hipchat
+    - integrationName: ship24-hipchat
       type: hipchat
       recipients: 
-        - "#hitchcock1"
-        - "#hitchcock1pvt"
-        - "@shiphitchcock1"
+        - "#testing"
+        #- "#hitchcock1pvt"
+        - "@shiphitchcock4"
       
       on_pull_request: never
       on_start: never
