@@ -29,41 +29,7 @@ integrations:
     - integrationName: email
       type: email
       recipients: 
-        - sreya@shippable.com
-        - sreyaj10@gmail.com
-      
-      on_pull_request: never
-      on_start: never
-      on_success: never
-      on_failure: never
-
-    - integrationName: ship4-slack
-      type: slack
-      recipients: 
-        - "#hitchcock1-public"
-        - pvt-channel
-      
-      on_pull_request: never
-      on_start: never
-      on_success: never
-      on_failure: never
- 
-    - integrationName: irc
-      type: irc
-      recipients: 
-        - "chat.freenode.net#test-cock1"
-      
-      on_pull_request: never
-      on_start: never
-      on_success: never
-      on_failure: never
-   
-    - integrationName: ship24-hipchat
-      type: hipchat
-      recipients: 
-        - "#testing"
-        #- "#hitchcock1pvt"
-        - "@shiphitchcock4"
+        - deepika@shippable.com
       
       on_pull_request: never
       on_start: never
