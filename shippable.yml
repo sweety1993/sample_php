@@ -35,7 +35,7 @@ integrations:
       on_start: never
       on_success: never
       on_failure: never
-    - integrationName: deepika-slac
+    - integrationName: deepika-slack
       type: slack
       recipients: 
         - "#testing"
