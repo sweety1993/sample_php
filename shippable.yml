@@ -1,29 +1,30 @@
 language: php
 
 php: 
-  - 5.3
+  #- 5.3
   - 5.4
-  - 5.5
-  - 5.6  
   
-env:
-  - secure: Cl9e5akLjt3kpM/czbS+c5VIqKOyiJmGuGiObRp/cDF0yedw5++lDapYyiCW5GggJ3Pxe7FEG7jwnfADpdV8AozUO8EVO6w2hHtK/651t2Cc/McLLDGPbatqIGjRXuLcN8uKBTnxe0an1Wmg1ep6vUfh88sdvzyKBGpXzAiPEUgKBWLsgXnrHaRC7LAuMEBO4JxWFkeoUVTXvsio1OcFtIqasQMBEj11k90NC5TwkoSQq3rRpHwWIBoJnDbCFwyuHomTA13vci2k3Hg/hBhl3YKd6UtZkOSe+mQjtBqYMF9AAIeM6NLen9SOsAdn85KgeI6O7vK1yaVPan79X5Pdrg==
-  - BOO=TEST
   
-build:
-  ci:
-    - mkdir -p shippable/codecoverage
-    - mkdir -p shippable/testresults   
-    - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
 
-integrations:
-   notifications:
-    - integrationName: email
-      type: email
-      recipients: 
-        - shiphitchcock1@gmail.com
-       # - varsha@shippable.com
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always  
+    
+build:
+ cache: true
+ 
+ cache_dir_list:
+    -  /root/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
+ 
+ ci:
+  - echo $IS_GIT_TAG
+  - echo "extension=intl.so" >> $HOME/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - dirToCache=`ls $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ | grep no-debug`
+  - echo $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/$dirToCache
+  - echo "$dirToCache" >> $HOME/version.txt
+  - cat $HOME/version.txt
+  - mkdir -p shippable/codecoverage
+  - mkdir -p shippable/testresults
+  - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
+ on_success:
+   - >
+      if [ "$IS_GIT_TAG" = "true" ]; then
+        echo "Release as ${GIT_TAG_NAME}."
+      fi;
